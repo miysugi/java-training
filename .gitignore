@@ -1,0 +1,15 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+### h2データベースのファイルを格納 ###
+h2/
+
+### IntelliJ IDEA ###
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/tasks.xml
+.idea/dataSources/
+
+/src/main/webapp/WEB-INF/classes/
+
