@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>todo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col col-xs-12">
+            <a href="/">トップページへ</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-xs-12">
+            <form action="/addTask" method="post">
+                <div class="mb-3">
+                    <label for="taskContent" class="form-label">タスク</label>
+                    <input type="text" class="form-control" name="taskContent" id="taskContent" required>
+                    <div id="textHelp" class="form-text">やることを書いてください</div>
+                </div>
+                <input type="submit" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+    <hr/>
+
+    <div class="row">
+        <div class="col col-xs-12">
+            <table class="table table-bordered table-striped">
+                <!--/*@thymesVar id="tasks" type="com.samuraism.javatraining.todo.Task"*/-->
+                <tr th:each="task : ${tasks}">
+                    <td th:text="${task.id}"></td>
+                    <td th:text="${task.text}"></td>
+                    <td>
+                        <form action="/removeTask" method="post">
+                            <input type="hidden" name="id" th:value="${task.id}"/>
+                            <input type="submit" value="完了" class="btn btn-danger form-control"/>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
