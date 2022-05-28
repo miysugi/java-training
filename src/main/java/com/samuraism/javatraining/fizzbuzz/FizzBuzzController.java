@@ -13,7 +13,7 @@ public class FizzBuzzController {
         this.fizzbuzz = fizzBuzz;
     }
     @GetMapping("/fizzbuzz")
-    String index(Model model) {
+    String fizzbuzz(Model model) {
         var fizzBuzz = fizzbuzz.fizzBuzzUntil(100);
         model.addAttribute("fizzBuzz", fizzBuzz);
         return "fizzbuzz";
