@@ -6,13 +6,12 @@ public class リファクタリング演習 {
     public static void main(String[] args) {
         var companyName = "Samuraism Inc.";
 
-        var str2 = """
-                テキストブロック
-                こんにちは
-                """;
+        var str2 = "テキストブロック\n" +
+                   "こんにちは\n";
+        System.out.println(str2);
 
         Person nobunaga = new Person("織田信長", 47);
-        System.out.printf("%s 享年:%d%n", nobunaga.getName(), nobunaga.getAge());
+        System.out.println(nobunaga.getName() + " 享年:" +nobunaga.getAge());
     }
 }
 
