@@ -14,7 +14,7 @@ public class FizzBuzzController {
     }
     @GetMapping("/fizzbuzz")
     String fizzbuzz(Model model) {
-        var fizzBuzz = fizzbuzz.fizzBuzzUntil(100);
+        var fizzBuzz = fizzbuzz.fizzBuzz();
         model.addAttribute("fizzBuzz", fizzBuzz);
         return "fizzbuzz";
     }
