@@ -9,7 +9,17 @@ public class FizzBuzz {
     }
 
     static public String fizzBuzz(int number) {
-        return "Hello";
+        String result = "";
+        if (number%3==0) {
+            result += "fizz";
+        }
+        if (number%5==0) {
+            result += "buzz";
+        }
+        if (number % 3 != 0 && number % 5 != 0) {
+            result+=number;
+        }
+        return result;
     }
 
     public String fizzBuzz() {
