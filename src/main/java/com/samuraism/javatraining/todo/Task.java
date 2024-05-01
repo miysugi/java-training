@@ -1,6 +1,6 @@
 package com.samuraism.javatraining.todo;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "Task")
