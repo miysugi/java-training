@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class FizzBuzzTest {
     @Test
     void 三でのみ割り切れる場合() {
-        assertEquals("fizz", FizzBuzz.fizzBuzz(3));
+        assertEquals("Fizz", FizzBuzz.fizzBuzz(3));
         assertEquals("Fizz", FizzBuzz.fizzBuzz(9));
         assertEquals("Fizz", FizzBuzz.fizzBuzz(99));
     }
